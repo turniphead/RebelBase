@@ -1,17 +1,24 @@
 package com.fortythirtygames.rebelliongamehelper
 
+import android.graphics.Rect
 import android.os.Bundle
 import android.support.design.widget.NavigationView
-import android.support.design.widget.Snackbar
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.GridLayoutManager
+import android.support.v7.widget.RecyclerView
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import com.fortythirtygames.rebelliongamehelper.model.GalacticSystem
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
+import kotlinx.android.synthetic.main.content_main.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+
+    //region activity lifecycle
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,8 +26,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setSupportActionBar(toolbar)
 
         fab?.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+            (recycler_view.adapter as? GalacticSystemAdapter)?.reset()
         }
 
         val toggle = ActionBarDrawerToggle(
@@ -30,6 +36,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         val navigationView = findViewById(R.id.nav_view) as NavigationView?
         navigationView?.setNavigationItemSelectedListener(this)
+        setupRecyclerView()
     }
 
     override fun onBackPressed() {
@@ -58,6 +65,27 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
 
         return super.onOptionsItemSelected(item)
+    }
+
+    //endregion
+
+    fun setupRecyclerView() {
+        with(recycler_view) {
+            setHasFixedSize(true)
+            layoutManager = GridLayoutManager(this.context, 3)
+            adapter = GalacticSystemAdapter(GalacticSystem.values().asList()) { system ->
+                system.toggleState()
+                adapter.notifyDataSetChanged()
+            }
+            addItemDecoration(object : RecyclerView.ItemDecoration() {
+                override fun getItemOffsets(outRect: Rect?, view: View?, parent: RecyclerView?, state: RecyclerView.State?) {
+                    super.getItemOffsets(outRect, view, parent, state)
+                    val verticalSpacing = 10
+                    outRect?.top = verticalSpacing
+                    outRect?.bottom = verticalSpacing
+                }
+            })
+        }
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
