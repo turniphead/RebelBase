@@ -35,9 +35,12 @@ dependencies {
     compile "com.android.support:recyclerview-v7:$supportLibraryVersion"
     compile "com.android.support:design:$supportLibraryVersion"
 
+    compile 'com.github.ronaldsmartin:AndroidImageMap:2.0.0-alpha'
+
     testCompile 'junit:junit:4.12'
 }
 
 repositories {
     mavenCentral()
+    maven { url "https://jitpack.io" }
 }
