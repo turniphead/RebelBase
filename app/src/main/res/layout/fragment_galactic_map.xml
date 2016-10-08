@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.ctc.android.widget.ImageMap
+        android:id="@+id/image_map"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@drawable/sw_rebellion_game_board"
+        app:map="@xml/galactic_map"
+        app:maxSizeFactor="1.0"
+        app:scaleFromOriginal="false"
+        app:fitImageToScreen="false"/>
+
+</LinearLayout>

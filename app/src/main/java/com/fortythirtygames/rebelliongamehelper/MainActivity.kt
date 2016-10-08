@@ -95,6 +95,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         if (id == R.id.nav_camera) {
             // Handle the camera action
+            supportFragmentManager.beginTransaction()
+                    .replace(android.R.id.content, GalacticMapFragment())
+                    .commit()
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
