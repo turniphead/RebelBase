@@ -1,4 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
 <maps xmlns:android="http://schemas.android.com/apk/res/android">
+    <map name="galactic_map" id="map_galaxy">
+        <!-- Northwest Region -->
+        <area
+            shape="poly"
+            coords="349,513,249,513,219,556,197,640,200,689,519,890,574,832,844,848,980,757,931,702,714,692,356,357"
+            id="@+id/yavin"/>
+        <area
+            shape="poly"
+            coords="362,224,444,305,671,348,795,292,1094,699,996,754,938,692,730,679,356,341"
+            id="@+id/felucia"/>
+        <area
+            shape="poly"
+            coords="1097,318,1217,377,1331,604,1110,686,805,286,1035,211"
+            id="@+id/saleucami"/>
+        <area
+            shape="poly"
+            coords="405,127,356,162,356,201,457,302,668,338,987,211,996,94,954,6,401,6"
+            id="@+id/mon_calamari"/>
+        <!-- Northern Region -->
+        <area shape="poly"
+            coords="1230,367,1123,315,1052,201,1084,75,1048,3,1325,6,1465,406,1276,452"
+            title="kessel"
+            id="@+id/kessel"/>
+        <area shape="poly"
+            coords="1933,101,1975,101,1975,192,1741,364,1474,406,1341,3,1933,6"
+            title="nal_hutta"
+            id="@+id/nal_hutta"/>
+        <area shape="poly"
+            coords="1279,461,1393,682,1523,734,1786,689,1734,377,1504,406"
+            title="toydaria"
+            id="@+id/toydaria"/>
+        <!-- TODO: Fix Bothawui -->
+        <area shape="poly"
+            coords="1988,198,1988,111,2014,111,2154,231,2118,527,2056,572,2050,683,1923,679,1796,686,1744,377"
+            title="bothawui"
+            id="@+id/bothawui"/>
+        <!-- Northeast Region -->
+        <!-- TODO: Fix Tatooine and Ryloth -->
+        <area shape="poly"
+            coords="2170,218,2024,101,2027,13,2719,13,2606,289"
+            title="tatooine"
+            id="@+id/tatooine"/>
+        <area shape="poly"
+            coords="3279,221,3266,16,2732,16,2680,153,2888,221,3061,289,3178,344"
+            title="ryloth"
+            id="@+id/ryloth"/>
+        <area shape="poly"
+            coords="2453,471,2544,429,2596,302,2381,257,2170,231,2141,530,2072,578,2069,679,2186,695,2368,728"
+            title="rodia"
+            id="@+id/rodia"/>
+        <area shape="poly"
+            coords="2667,163,2914,241,3174,354,3070,484,2888,546,2557,429"
+            title="geonosis"
+            id="@+id/geonosis"/>
+        <!-- Southwest Region -->
+        <area shape="poly"
+            coords="382,1440,411,1498,388,1664,356,1661,336,1505,184,1489,184,1274,164,1203,184,796,457,972,597,1053,460,1235"
+            title="dantooine"
+            id="@+id/dantooine"/>
+        <area shape="poly"
+            coords="866,1372,996,1420,1052,1310,1139,1206,1094,1173,870,1209,606,1056,483,1235,398,1427,427,1492,414,1583,414,1667,678,1667,701,1482"
+            title="mygeeto"
+            id="@+id/mygeeto"/>
+        <!-- TODO: Fix Ilum -->
+        <area shape="poly"
+            coords="1065,1511,1341,1622,1341,1664,701,1664,720,1485,860,1381,993,1437"
+            title="ilum"
+            id="@+id/ilum"/>
+        <area shape="poly"
+            coords="1354,1615,1081,1505,1006,1430,1068,1316,1146,1216,1569,1544,1556,1602,1562,1664,1364,1667"
+            title="ord_mantell"
+            id="@+id/ord_mantell"/>
+        <!-- Central Region -->
+        <area shape="poly"
+            coords="850,868,938,806,1143,1014,1094,1154,883,1190,480,959,584,852"
+            title="dathomir"
+            id="@+id/dathomir"/>
+        <area shape="poly"
+            coords="1156,1014,951,800,1230,663,1533,1151,1403,1229,1312,1320,1113,1160"
+            title="mandalore"
+            id="@+id/mandalore"/>
+        <area shape="poly"
+            coords="1757,826,1910,943,1916,1053,1747,1076,1630,1115,1543,1141,1240,666,1338,627,1383,699,1530,754,1734,715"
+            title="kashyyyk"
+            id="@+id/kashyyyk"/>
+        <!-- TODO: Fix Malastare -->
+        <area shape="poly"
+            coords="1925,938,1769,815,1746,711,1909,691,2068,691,2211,711,2351,743,2266,1020,2097,987,2017,1053,1933,1053"
+            title="malastare"
+            id="@+id/malastare"/>
 
+        <!-- Eastern Region -->
+        <area shape="poly"
+            coords="2313,913,2466,481,2544,445,2872,559,2706,786,2703,890,2648,962,2492,978"
+            title="naboo"
+            id="@+id/naboo" />
+        <!-- TODO: Fix Utapau, Dagobah, Sullust -->
+        <area shape="poly"
+            coords="2823,660,2879,562,3077,491,3135,413,3213,390,3344,231,3435,257,3467,663,3441,676,3243,692,3158,773,2966,647"
+            title="utapau"
+            id="@+id/utapau" />
+        <area shape="poly"
+            coords="2658,962,2713,894,2719,803,2807,673,2950,657,3142,777,3152,819,3038,913,3031,962,2859,1108"
+            title="dagobah"
+            id="@+id/dagobah" />
+        <area shape="poly"
+            coords="2274,1030,2313,923,2489,988,2648,975,2765,1053,2843,1118,2612,1313,2498,1206,2349,1131"
+            title="sullust"
+            id="@+id/sullust" />
+
+        <!-- Southeast Region -->
+        <area shape="poly"
+            coords="2807,1524,3262,1329,3240,1479,3266,1671,2823,1671"
+            title="endor"
+            id="@+id/endor"/>
+        <!-- TODO: Fix Mustafar, Bespin, Hoth -->
+        <area shape="poly"
+            coords="3048,972,3061,920,3253,748,3428,735,3461,709,3487,965,3246,1115,3223,1138,3178,1167,3044,1105,2872,1225,2771,1212"
+            title="mustafar"
+            id="@+id/mustafar"/>
+        <area shape="poly"
+            coords="2875,1232,3041,1118,3174,1173,3266,1323,2801,1511,2749,1388,2671,1290,2752,1216"
+            title="bespin"
+            id="@+id/bespin"/>
+        <area shape="poly"
+            coords="3275,1326,3256,1479,3275,1573,3282,1661,3386,1661,3373,1440,3522,1407,3493,978,3249,1121,3236,1144,3191,1180"
+            title="hoth"
+            id="@+id/hoth"/>
+        <!-- Southern Region -->
+        <area shape="poly"
+            coords="1325,1329,1435,1225,1640,1128,1725,1303,1871,1271,1998,1261,2115,1280,2098,1362,1949,1342,1809,1368,1721,1410,1656,1466,1611,1544,1585,1537"
+            title="alderaan"
+            id="@+id/alderaan"/>
+        <area shape="poly"
+            coords="1650,1118,1803,1085,2017,1076,2095,1007,2254,1040,2329,1137,2261,1271,2183,1293,2053,1254,1900,1254,1738,1293"
+            title="cato_nemoidia"
+            id="@+id/cato_nemoidia"/>
+        <!-- TODO: Fix Corellia, Coruscant -->
+        <area shape="poly"
+            coords="2111,1365,2128,1287,2183,1300,2277,1281,2342,1147,2508,1245,2615,1346,2684,1456,2726,1583,2732,1661,2339,1664,2342,1550,2254,1433"
+            title="corellia"
+            id="@+id/corellia"/>
+        <area shape="poly"
+            coords="1621,1544,1588,1554,1575,1612,1582,1664,2333,1664,2323,1547,2258,1463,2170,1404,2050,1368,1942,1352,1835,1368,1741,1411,1679,1459"
+            title="coruscant"
+            id="@+id/coruscant"/>
+    </map>
 </maps>
